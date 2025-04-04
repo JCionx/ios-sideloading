@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --primary-color: #a550a7;
+    --primary-color-active: #a550a7;
+    --background-color: #303030;
+    --secondary-color: #2ecc71;
+    --text-color: #ffffff;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Customize the default animation behavior */
+
+::view-transition-group(root) {
+    animation-duration: 0.3s;
+}
+
+/* Create a custom animation */
+
+@keyframes move-out {
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-60%);
+        opacity: 0.4;
+    }
+}
+
+@keyframes move-in {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* Apply the custom animation to the old and new page states */
+
+::view-transition-old(root) {
+    animation: 0.3s ease-out both move-out;
+
+}
+
+::view-transition-new(root) {
+    animation: 0.3s ease-out both move-in;
+}
+
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 16px;
+    line-height: 1.5;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 32px);
+    padding: 16px;
+    background: linear-gradient(to bottom, transparent, var(--background-color));
+
+}
+
+.main-action {
+    width: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.main-action:active {
+    background-color: var(--primary-color-active);
+}
+
+.silent-action {
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--text-color);
+}
