@@ -61,6 +61,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     padding: 16px;
     line-height: 1.5;
+    margin-bottom: 90px;
 }
 
 .bold {
@@ -105,4 +106,10 @@ body {
     padding: 14px;
     text-decoration: none;
     color: var(--text-color);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
