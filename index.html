@@ -7,19 +7,56 @@
     <title>iOS Sideloading Setup</title>
 </head>
 <body>
+
+    <div class="os-warning">
+        <div>
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <p>
+                This guide is only for iOS/iPadOS, and nothing here will work on other operating systems.
+            </p>
+        </div>
+        <button class="main-action">I understand</button>
+    </div>
     
     <h1 class="title">iOS Sideloading Setup</h1>
     
     <div class="content">
         <p>
             This guide will help you set up your iOS device for sideloading apps.
-            Follow the instructions carefully to ensure a smooth installation process. 
+            <span class="bold">Please read the entirety of the guide without skipping anyting in order to experience a smooth installation process.</span>
         </p>
     </div>
 
     <div class="actions">
         <a href="pages/dns/dns-overview.html" class="main-action">Get started</a>
     </div>
+
+    <script>
+        function iOS() {
+            return [
+              'iPad Simulator',
+              'iPhone Simulator',
+              'iPod Simulator',
+              'iPad',
+              'iPhone',
+              'iPod'
+            ].includes(navigator.platform)
+            || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        }
+
+        const osWarning = document.querySelector('.os-warning');
+
+        if (iOS()) {
+            osWarning.style.display = 'none';
+        } else {
+            osWarning.style.display = 'flex';
+            const button = osWarning.querySelector('.main-action');
+            button.addEventListener('click', () => {
+                osWarning.style.display = 'none';
+            });
+        }
+
+    </script>
 
     <script src="index.js"></script>
 </body>
