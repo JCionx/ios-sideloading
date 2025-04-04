@@ -17,9 +17,9 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>jcionx.github.io</string>
+				<string>kh.crysalis.feather</string>
 				<key>bundle-version</key>
-				<string>5.0.0</string>
+				<string>1.4.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
