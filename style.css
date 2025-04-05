@@ -4,6 +4,7 @@
     --primary-color: #a550a7;
     --primary-color-active: #a550a7;
     --background-color: #303030;
+    --sec-background-color: #434343;
     --secondary-color: #2ecc71;
     --text-color: #ffffff;
 }
@@ -147,4 +148,12 @@ body {
 
 .os-warning button:active {
     background-color: rgb(171, 37, 37);
+}
+
+.card {
+    background-color: var(--sec-background-color);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
