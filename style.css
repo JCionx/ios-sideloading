@@ -87,6 +87,19 @@ body {
 
 }
 
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .actions a {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
 .main-action {
     width: 100%;
     background-color: var(--primary-color);
